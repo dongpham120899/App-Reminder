@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:freezesText="true"
+        android:textColor="#2F4F4F"
+        android:text="List"
+        android:textSize="20sp"
+        app:drawableTint="#AF6969"></TextView>
+    <ImageView
+        android:id="@+id/imageEdit"
+        android:layout_weight="0.5"
+        android:src="@drawable/edit"
+        android:layout_marginRight="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"></ImageView>
+    <ImageView
+        android:id="@+id/imageDelete"
+        android:src="@drawable/delete"
+        android:layout_weight="0.5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"></ImageView>
+
+</LinearLayout>

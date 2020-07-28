@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="Edit"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+    <EditText
+        android:id="@+id/etEdit"
+        android:layout_weight="1"
+        android:text="Enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reminder"></Button>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtReminder"
+        android:text="dd//mm/yy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="Edit"
+            android:layout_weight="1"
+            android:id="@+id/btEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:id="@+id/btCancelEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
