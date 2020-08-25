@@ -8,8 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class Database extends SQLiteOpenHelper {
-    public Database(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+public class MyDatabase extends SQLiteOpenHelper {
+    public MyDatabase(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
     //Update
@@ -26,24 +26,25 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        String sql;
+        sql = "CREATE TABLE IF NOT EXISTS MyList(" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "name VARCHAR(255)," +
+                "date DATE DEFAULT '27-7-2020' NOT NULL," +
+                "time VARCHAR(255) DEFAULT '8:00'," +
+                "status VARCHAR(255) DEFAULT 'incomplete')";
+        sqLiteDatabase.execSQL(sql);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        String sql;
+        sql= String.format("DROP TABLE IF NOT EXISTS MyList");
+        sqLiteDatabase.execSQL(sql);
 
+        onCreate(sqLiteDatabase);
     }
 
-    public void addData(String name){
-        SQLiteDatabase database = this.getWritableDatabase();
 
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("name",name);
-        contentValues.put("date","20-2-2020");
-        contentValues.put("time","20-2-2020");
-        contentValues.put("status","20-2-2020");
-
-        database.insert("MyList", null, contentValues);
-        database.close();
-    }
 }

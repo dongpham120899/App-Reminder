@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Music.MusicActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary_dark"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Notification Setting"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/listSetting"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105"
+        tools:layout_editor_absoluteX="0dp"></TextView>
+
+    <CheckBox
+        android:id="@+id/chipIsMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm music"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="33dp" />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/titleMusic"
+        android:layout_width="wrap_content"
+        android:text="Music"
+        android:layout_height="wrap_content"></TextView>
+    <ListView
+        android:layout_marginTop="20dp"
+        android:id="@+id/listMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</LinearLayout>

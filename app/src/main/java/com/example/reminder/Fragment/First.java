@@ -1,10 +1,6 @@
-package com.example.reminder;
+package com.example.reminder.Fragment;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,27 +9,31 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.example.reminder.Database.Database;
+import com.example.reminder.Database.MyDatabase;
 import com.example.reminder.Database.MyList;
+import com.example.reminder.ListAdapter;
+import com.example.reminder.MainActivity;
+import com.example.reminder.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class First extends Fragment {
-    public static final String TAB = "message";
+    public static final String TAG = "message";
+    private static final String NAME_DB = "MyList";
+    private static final int DATABASE_VERSION = 1 ;
 
-
-    //private MainActivity context;
 
     public ListView lvList;
-    private ArrayList<MyList> arrayList;
-    MainActivity mContext;
-    ListAdapter adapter;
+    private ArrayList<MyList> myLists;
+    private ListAdapter adapter;
+
+    public First(){}
+    public First(ArrayList<MyList> a){
+        this.myLists = a;
+    }
 
 
     @Override
@@ -45,25 +45,14 @@ public class First extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i(TAB,"onCreateView in Fisrt");
+        Log.i("TAG","onCreateView in Fisrt");
         View view = inflater.inflate(R.layout.fragment_first, container, false);
-
         lvList = (ListView) view.findViewById(R.id.lvList);
-        arrayList = new ArrayList<>();
-        adapter = new ListAdapter((MainActivity) getActivity(), R.layout.item_list_layout, arrayList);
+        adapter = new ListAdapter((MainActivity) getActivity(), R.layout.item_list_layout, myLists);
         lvList.setAdapter(adapter);
 
+        adapter.notifyDataSetChanged();
 
-
-        mContext.GetDataList();
         return view;
     }
-    //lay du lieu
-
-
-
-
-
-
-
 }

@@ -2,29 +2,31 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:padding="5dp"
     android:layout_marginBottom="5dp"
+    android:paddingHorizontal="@dimen/cardview_default_radius"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
     android:elevation="2dp"
     android:background="@drawable/res"
     android:layout_height="match_parent">
 
 
     <ImageView
-        android:id="@+id/imageIsComplete"
+        android:id="@+id/imageItemSetting"
         android:layout_marginRight="20dp"
         android:layout_width="30dp"
         android:layout_height="50dp"></ImageView>
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="260dp"
+        android:layout_width="280dp"
         android:layout_marginRight="3dp"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tvList"
+            android:id="@+id/txtSetting"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -35,7 +37,7 @@
             android:textSize="18sp"
             app:drawableTint="#AF6969"></TextView>
         <TextView
-            android:id="@+id/txtDateTime"
+            android:id="@+id/txtSettingDetails"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -45,17 +47,10 @@
             android:textSize="14sp"
             app:drawableTint="#AF6969"></TextView>
     </LinearLayout>
-
     <ImageView
-        android:id="@+id/imageEdit"
-        android:src="@drawable/edit"
-        android:layout_marginRight="20dp"
-        android:layout_width="15dp"
-        android:layout_height="50dp"></ImageView>
-    <ImageView
-        android:id="@+id/imageDelete"
-        android:src="@drawable/delete"
-        android:layout_width="15dp"
-        android:layout_height="50dp"></ImageView>
+        android:layout_marginTop="13dp"
+        android:id="@+id/image01"
+        android:layout_width="30dp"
+        android:layout_height="30dp"></ImageView>
 
 </LinearLayout>

@@ -23,6 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         android:background="@color/colorPrimaryDark"
+        android:elevation="10dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
         <com.google.android.material.tabs.TabItem
@@ -47,7 +48,7 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="625dp"
         android:layout_marginTop="1dp"
         app:layout_constraintStart_toStartOf="parent"

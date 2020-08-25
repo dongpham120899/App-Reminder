@@ -1,49 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="300dp"
+    android:background="#473C8B"
+    android:layout_height="wrap_content">
     <TextView
         android:id="@+id/textAdd"
         android:padding="10dp"
-        android:textSize="26sp"
-        android:gravity="center"
+        android:textSize="24sp"
+        android:textColorHint="@color/cardview_dark_background"
         android:textStyle="bold"
-        android:textColor="#363636"
-        android:text="Add"
+        android:textColor="#DCDCDC"
+        android:layout_marginLeft="5dp"
+        android:text="ADD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     </TextView>
 
     <EditText
         android:id="@+id/eTAdd"
-        android:textColor="#4F4F4F"
-        android:text="Enter..."
-        android:layout_below="@id/textAdd"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </EditText>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textAdd"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:hint="Enter..."
+        android:textColor="@color/cardview_light_background"
+        android:textColorHint="#B5B5B5"
+        android:textEditSideNoPasteWindowLayout="@color/cardview_light_background"></EditText>
+
     <Button
         android:id="@+id/btAdd"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/eTAdd"
-        android:text="Add"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </Button>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eTAdd"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="#7A67EE"
+        android:text="Add"
+        android:textColor="@color/cardview_light_background"></Button>
+
     <Button
         android:id="@+id/btCancel"
         android:layout_toRightOf="@id/btAdd"
         android:layout_marginTop="10dp"
+        android:textColor="@color/cardview_light_background"
+        android:background="#7A67EE"
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/eTAdd"
         android:text="Cancel"
         android:layout_width="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="15dp"
         android:layout_height="wrap_content">
     </Button>
 </RelativeLayout>
